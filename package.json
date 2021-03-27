@@ -1,14 +1,12 @@
 {
-  "name": "budget-pwa",
+  "name": "budget-app",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "lite-server": "lite-server",
-    "build": "npm run webpack",
-    "webpack": "webpack"
+    "lite-server": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -26,10 +24,5 @@
     "lite-server": "^2.5.3",
     "mongoose": "^5.5.15",
     "morgan": "^1.9.1"
-  },
-  "devDependencies": {
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
-    "webpack-pwa-manifest": "^4.2.0"
   }
 }
