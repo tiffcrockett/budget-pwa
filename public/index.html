@@ -6,19 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#317EFB">
   <link rel="shortcut icon" href="icons/icon-192x192.png" type="image/x-icon">
-
+ 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css" >
-  <title>Budget Tracker</title> 
+  <title>Avid Traveller Budget Tracker</title> 
   <!-- MDN documentation -> manifest.json  -->
   <link rel="manifest" href="./public/dist/manifest.json">
 </head>
-<body>
-  <div class="wrapper">
+<body> 
+  <div class="wrapper"> 
+    <div class="header">  
+      <h2>Avid Traveller Budget Tracker</h2>
+      <button type="button" class="btn btn-secondary btn-lg" value="clear" onclick="clear()">Clear</button>
+    </div> 
     <div class="total">
-      <div class="total">Your total is: $<span id="total">0</span></div>
+      <div class="total">Current Balance: $<span id="total">0</span></div>
     </div>
-
     <div class="form">
       <input type="text" id="t-name" placeholder="Name of transaction" />
       <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />

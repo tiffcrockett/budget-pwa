@@ -1,6 +1,7 @@
 body {
-  font-size: 120%;
+  font-size: 115%;
   font-family: Arial;
+  background-color: darkgrey;
 }
 
 button, input {
@@ -28,12 +29,30 @@ tr:nth-child(even) {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 825px;
+  max-width: 800px;
   text-align: center;
+  background-color: white;
+  border-radius: 16px;
+} 
+
+.header {
+  margin-top: 5px;
+  padding: 15px; 
+  color: #533bee;
+} 
+
+.btn {
+  float: right;
+  width: 80px;
+  border-radius: 15px;
+  background-color: #533bee;
+  color: white;
+  cursor: pointer;
 }
 
-.total {
-  font-size: 150%;
+.total { 
+  margin-top: 15px;
+  font-size: 110%;
   text-decoration: underline;
 }
 
