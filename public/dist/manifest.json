@@ -1,6 +1,7 @@
 {
     "name": "budget-pwa",
     "short_name": "pwa", 
+    "orientation": "portrait",
     "start_url": "/",
     "background_color": "#808080",
     "display": "standalone",
