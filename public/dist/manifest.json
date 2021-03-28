@@ -3,9 +3,9 @@
     "short_name": "pwa", 
     "orientation": "portrait",
     "start_url": "/",
-    "background_color": "#808080",
+    "background_color": "#fff",
     "display": "standalone",
-    "theme_color": "#808080",
+    "theme_color": "#fff",
     "icons": [
       {
         "src": "/assets/images/icons-192.png",
