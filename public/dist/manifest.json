@@ -2,7 +2,7 @@
     "name": "budget-pwa",
     "short_name": "pwa", 
     "orientation": "portrait",
-    "start_url": "/",
+    "start_url": "/index.html",
     "background_color": "#fff",
     "display": "standalone",
     "theme_color": "#fff",
