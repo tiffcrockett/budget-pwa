@@ -1,5 +1,5 @@
 body {
-  font-size: 115%;
+  font-size: 110%;
   font-family: Arial;
   background-color: darkgrey;
 }
@@ -32,23 +32,14 @@ tr:nth-child(even) {
   max-width: 800px;
   text-align: center;
   background-color: white;
-  border-radius: 16px;
 } 
 
 .header {
-  margin-top: 5px;
+  margin-top: 50px;
   padding: 15px; 
-  color: #533bee;
+  color: white; 
+  background-color: #6c5be9;
 } 
-
-.btn {
-  float: right;
-  width: 80px;
-  border-radius: 15px;
-  background-color: #533bee;
-  color: white;
-  cursor: pointer;
-}
 
 .total { 
   margin-top: 15px;
@@ -67,4 +58,14 @@ tr:nth-child(even) {
   overflow: auto;
   width: 90%;
   margin: 0 auto;
+}
+
+#add-btn {
+  background-color: #32bb32;
+  color: white;
+} 
+
+#sub-btn {
+  background-color: red;
+  color: white;
 }

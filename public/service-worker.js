@@ -8,7 +8,7 @@ const FILES_TO_CACHE = [
     '/icons/icon-512x512.png',
     '/chart.min.js',
     "/db.js",
-    "/style.css",
+    "/assets/css/style.css",
     "/service-worker.js", 
     "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
   ];
