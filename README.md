@@ -9,7 +9,7 @@
 
 ## Description
 
-Budget-PWA us a progressive web application designed to give users a fast and easy way to track their money at anytime. The user will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they can populate the total when brought back online.
+Budget-PWA aka. Avid Traveler Budget Tracker is a progressive web application designed to give users a fast and easy way to track their money at anytime. The user will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they can populate the total when brought back online.
 
   Offline Functionality:
 
@@ -19,12 +19,14 @@ Budget-PWA us a progressive web application designed to give users a fast and ea
 
   When brought back online:
 
-   * Offline entries should be added to tracker.
+   * Offline entries are added to tracker. 
+   
+The functionality of the application is especially useful to travelers, so they are able to track deposits and withdrawls with or without internet/data connection.
 
 
 ## Application-Video
 
-![image](https://github.com/tiffcrockett/budget-pwa/blob/main/public/assets/pwa-video.gif?)
+![image](https://github.com/tiffcrockett/budget-pwa/blob/main/public/assets/pwa-vide0.gif?)
 
 
 
@@ -36,5 +38,3 @@ Deploy the application on Heroku:  https://sleepy-ocean-76937.herokuapp.com/
 Feel free to contact me with any comments or questions:
 crockett.tiff@gmail.com
 
-
-<
