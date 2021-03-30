@@ -20,7 +20,7 @@ Most importantly, Express Note Taker is mobile friendly, making it useful for ev
 
 ## Application-Video
 
-![caption](https://github.com/tiffcrockett/budget-pwa/blob/main/public/assets/Avid%20Traveler%20Budget%20Tracker.gif? height="580" width="480")
+![caption]('https://github.com/tiffcrockett/budget-pwa/blob/main/public/assets/Avid%20Traveler%20Budget%20Tracker.gif height="580" width="480"')
 
 
 
