@@ -78,10 +78,6 @@ self.addEventListener("fetch", event => {
         if (cachedResponse) {
             return cachedResponse;
         }
-        else if (event.request.headers.get("accept").includes("text/html")) {
-            // return the cached home page for all requests for html pages
-            return caches.match("/");
-        }
         // request is not in cache. make network request and cache the response
         return caches.open(RUNTIME_CACHE).then(cache => {
             return fetch(event.request).then(response => {
