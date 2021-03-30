@@ -1,3 +1,4 @@
+// cache of file to be used offline
 const FILES_TO_CACHE = [
     "/",
     '/index.html',
@@ -8,10 +9,11 @@ const FILES_TO_CACHE = [
     '/manifest.webmanifest',
     '/service-worker.js', 
   ]; 
-
+// cache names
   const PRECACHE = 'precache-v1';
-  const RUNTIME = 'runtime';
+  const DATA_CACHE = 'runtime';
   
+  // self reference to confirm installatio of this svc wkr
   self.addEventListener('install', (event) => {
     event.waitUntil(
       caches
@@ -23,7 +25,7 @@ const FILES_TO_CACHE = [
   
   // The activate handler takes care of cleaning up old caches.
   self.addEventListener('activate', (event) => {
-    const currentCaches = [PRECACHE, RUNTIME];
+    const currentCaches = [PRECACHE, DATA_CACHE];
     event.waitUntil(
       caches
         .keys()
@@ -40,22 +42,23 @@ const FILES_TO_CACHE = [
         .then(() => self.clients.claim())
     );
   });
-  
+  // sw hears fetch request, records action in cache
   self.addEventListener('fetch', (event) => {
-    if (event.request.url.startsWith(self.location.origin)) {
+    if (event.request.url.includes("/api/transction")) {
       event.respondWith(
-        caches.match(event.request).then((cachedResponse) => {
-          if (cachedResponse) {
-            return cachedResponse;
-          }
-  
-          return caches.open(RUNTIME).then((cache) => {
-            return fetch(event.request).then((response) => {
-              return cache.put(event.request, response.clone()).then(() => {
-                return response;
-              });
-            });
-          });
+        caches.open(DATA_CACHE).then((cache) => {
+          return fetch(event.request)
+          .then((response) => {  
+            // response is good, record and store in cache
+            if (response.status === 200 ){
+              cache.put(event.request.url, response.clone());
+            }
+             return response;
+          }) 
+          // network fail-no internet, return cache 
+          .catch((err) => {
+            return cache.match(event.request);
+          })
         })
       );
     }
