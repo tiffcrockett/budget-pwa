@@ -4,58 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#317EFB">
-  <link rel="shortcut icon" href="./icons/icon-192x192.png" type="image/x-icon">
- 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./assets/css/styles.css" >
-  <title>Avid Traveler Budget Tracker</title> 
-  <!-- MDN documentation -> manifest.json  -->
-  <link rel="manifest" href="./dist/manifest.json">
+  <meta name="theme-color" content="#317EFB"> 
+  <meta name="description" content="A budget tracker that will log income and expenses so that users can maintain a budget." >
+  <link rel="shortcut icon" href="assets/images/icons/hand4.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/styles.css"> 
+  <title>Avid Traveler Budget Tracker</title>  
+  <link rel="manifest" href="/manifest.webmanifest">
 </head>
-<body> 
-  <div class="wrapper"> 
-    <div class="header">  
-      <h2>Avid Traveler Budget Tracker</h2> 
-    </div>
-    <div class="total">
-      <div class="total">Current Balance: $<span id="total">0</span></div>
-    </div>
-    <div class="form">
-      <input type="text" id="t-name" placeholder="Travel Expense Item" />
-      <input type="number" min="0" id="t-amount" placeholder="Expense Amount" />
-      <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
-      <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
-      <p class="error"></p>
+
+  <body> 
+    <div class="wrapper"> 
+      <div class="header">  
+        <h2>Avid Traveler Budget Tracker</h2> 
+      </div>
+      <div class="total">
+        <div class="total">Current Balance: $<span id="total">0</span></div>
+      </div>
+      <div class="form">
+        <input type="text" id="t-name" placeholder="Travel Expense Item" />
+        <input type="number" min="0" id="t-amount" placeholder="Expense Amount" />
+        <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
+        <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
+        <p class="error"></p>
+      </div>
+
+      <div class="transactions">
+        <table>
+          <thead>
+            <th>Transaction</th>
+            <th>Amount</th>
+          </thead>
+          <tbody id="tbody">
+            
+          </tbody>
+        </table>
+      </div>
+      
+      <canvas id="myChart"></canvas>
     </div>
 
-    <div class="transactions">
-      <table>
-        <thead>
-          <th>Transaction</th>
-          <th>Amount</th>
-        </thead>
-        <tbody id="tbody">
-          
-        </tbody>
-      </table>
-    </div>
-    
-    <canvas id="myChart"></canvas>
-  </div>
-
-  <script src="./chart.min.js"></script>
-  <script src="./index.js"></script>
-  <script src="./db.js"></script>
-  <script src="./dist/bundle.js"></script>
-  <script>
-    (function () {
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("./service-worker.js", { scope: "/" })
-          .then(() => console.log("Service Worker registered successfully."))
-          .catch(error => console.log("Service Worker registration failed:", error));
-      }
-    })();
-  </script>
-</body>
+    <script src="./chart.min.js"></script>
+    <script src="./index.js"></script>
+    <script src="./db.js"></script>
+    <script>
+      (function () {
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("./service-worker.js", { scope: "/" })
+            .then(() => console.log("Service Worker registered successfully."))
+            .catch(error => console.log("Service Worker registration failed:", error));
+        }
+      })();
+    </script>
+  </body>
 </html>

@@ -1,0 +1,15 @@
+{
+  "name": "Budget-PWA",
+  "short_name": "Budget-PWA",
+  "icons": [
+    {
+      "src": "assets/images/icons/hand4.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#317EFB",
+  "background_color": "#ffffff",
+  "start_url": "/",
+  "display": "standalone"
+}
