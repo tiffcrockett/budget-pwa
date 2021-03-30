@@ -9,7 +9,6 @@ const FILES_TO_CACHE = [
     '/db.js',
     '/manifest.webmanifest',
     '/service-worker.js', 
-    'https://cdn.jsdelivr.net/npm/chart.js@2.8.0',
   ]; 
 
 const STATIC_CACHE = "static-cache-v1";
