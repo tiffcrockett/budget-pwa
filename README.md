@@ -38,5 +38,3 @@ Deploy the application on Heroku:  https://sleepy-ocean-76937.herokuapp.com/
 Feel free to contact me with any comments or questions:
 crockett.tiff@gmail.com
 
-
-<
