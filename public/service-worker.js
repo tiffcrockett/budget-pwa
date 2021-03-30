@@ -4,8 +4,6 @@ const FILES_TO_CACHE = [
     '/index.js',
     '/assets/images/icons/hand4.png', 
     '/assets/css/styles.css',
-    '/chart.min.js',
-    '/font-awesome.min.css',
     '/db.js',
     '/manifest.webmanifest',
     '/service-worker.js', 
@@ -77,6 +75,9 @@ self.addEventListener("fetch", event => {
     caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
             return cachedResponse;
+        } else if (event.request.headers.get("accept").includes("text/html")) {
+          // return the cached home page for all requests for html pages
+          return caches.match("/");
         }
         // request is not in cache. make network request and cache the response
         return caches.open(RUNTIME_CACHE).then(cache => {
