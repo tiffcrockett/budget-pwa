@@ -24,7 +24,7 @@ Budget-PWA us a progressive web application designed to give users a fast and ea
 
 ## Application-Video
 
-![](pwa-video.gif)
+![image](https://github.com/tiffcrockett/budget-pwa/blob/main/public/assets/pwa-video.gif?)
 
 
 
