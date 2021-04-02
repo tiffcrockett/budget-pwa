@@ -48,7 +48,7 @@ const FILES_TO_CACHE = [
   // this code uses Native JS fetch event 
   // fetch transaction, respond with cache...
   self.addEventListener("fetch", evt => {
-    if(evt.request.url.includes('/api/')) {
+    if(evt.request.url.includes('/api/transaction')) {
         console.log('[Service Worker] Fetch(data)', evt.request.url);
     
 evt.respondWith(
