@@ -32,7 +32,7 @@ The functionality of the application is especially useful to travelers, so they 
 
 ## Deployed Link
 
-Deploy the application on Heroku:  https://sleepy-ocean-76937.herokuapp.com/ 
+Currently not deployed
 
 ## Contact 
 Feel free to contact me with any comments or questions:
